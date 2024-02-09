@@ -13,6 +13,10 @@ Export it
 
 Please rename and save in the root folder of the cloned project.
 
-![Export](screenshots/tree1.png)
+![Tree](screenshots/tree1.png)
 
 Run the proyect with ```python3 load.py```
+
+![Tree](screenshots/zip.png)
+
+![Tree](screenshots/post.png)
