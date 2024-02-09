@@ -10,7 +10,7 @@ Export it
 
 ![Export](screenshots/export.png)
 
-Please rename and save in the root folder of the cloned project.
+Please rename **posts.json** and save in the root folder of the cloned project.
 
 ![Tree](screenshots/tree1.png)
 
@@ -20,11 +20,13 @@ Run the proyect with ```python3 load.py```
 
 In the posts folder will be all the files to import in Hashnode, one by one, but we can use the .zip file that is in the root folder to upload all the posts at once. 
 
-To import the .zip file, follow these steps.
+To import the **archivo.zip** file, follow these steps.
+
+*Note: archivo.zip file, contains all the .md files in the posts folder.*
 
 ![Tree](screenshots/import.png)
 
-If we check an .md, it is the post without the HTML tags and leave the image tags. This way you can edit the post and upload them from the Wordpress folder located in **wp-content/uploads**.
+If we check an .md, it is the post without the HTML tags and leave the image tags. This way you can edit the post and upload them from the Wordpress folder located in **wp-content/uploads**. This way you will have the images with the same quality as you had them in your Wordpress. 
 
 ![Tree](screenshots/post.png)
 
