@@ -1,4 +1,6 @@
-import re, os, json
+import re
+import os
+import json
 from zipfile import ZipFile
 
 def create_post_md(title, date, slug, image, content):
@@ -33,12 +35,13 @@ def zip_folder(nombre_carpeta, nombre_zip):
 with open('posts.json', 'r') as file:
     data = json.load(file)
 
-
 # Iterate over each item and print the Title
 for item in data:
-    cleaned_string = re.sub(r'<[^>]*>', '', item["Content"])
+    cleaned_string = re.sub(r'<(?!img\s).*?>', '', item["Content"])  # Remove all HTML tags except img
     create_post_md(item["Title"], item["Date"], item["Title"].replace("/", "-"), "Insert Image URL Here", cleaned_string)
-    print("Se creo el Archivo ", item["Title"] + ".md" )
+    img_urls = re.findall(r'<img.*?src="(.*?)".*?>', item["Content"])  # Extract img URLs
+    print("Se creo el Archivo ", item["Title"] + ".md")
+    print("Image URLs:", img_urls)
 
 # Zip Var
 folder = 'posts'
